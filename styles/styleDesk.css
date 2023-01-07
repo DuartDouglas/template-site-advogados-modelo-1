@@ -14,17 +14,24 @@
   }
 
   /* ================== Home ===================== */
+  main #home {
+    min-height: 100vh;
+  }
 
   #home {
     background: #ffffff url(../assets/background.png);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
-    padding-block: 25rem;
+    padding-block: 0rem;
 
     color: #ffffff;
 
     padding-inline: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #home h2,
@@ -33,9 +40,22 @@
     text-align: center;
   }
 
+  #home h2 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+
   #home h1 {
     font-size: 3.2rem;
-    line-height: 4.4rem;
+    line-height: 3.6rem;
+    margin-block: 0.7rem;
+  }
+
+  #home p {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
   }
 
   #home .button a {
@@ -54,7 +74,7 @@
     background-position: left top;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:center;
     align-items: flex-start;
     padding-inline: 10rem;
     padding-block: 14rem 8rem;
@@ -70,14 +90,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     flex-wrap: wrap;
 
     margin-block: initial;
+    margin-left: 10rem;
   }
 
   .segment-item {
     flex-grow: 1;
-    flex-basis: 15rem;
+    flex-basis: 20rem;
 
     padding-block: 2rem;
     padding-inline: 1rem;
@@ -87,6 +109,10 @@
 
   .segment-item img {
     height: 4rem;
+  }
+
+  #segments .button {
+    justify-content: flex-end;
   }
 
   #segments .button a {
@@ -149,6 +175,16 @@
     column-gap: 3rem;
   }
 
+  #contact p {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  #contact-footer {
+    background-position: center;
+    height: 90vh;
+  }
+
   #contact-footer h3 {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -180,5 +216,11 @@
   #contact-footer a {
     font-size: 3rem;
     line-height: 3.5rem;
+    margin-top: 2rem;
   }
+
+  #backToTopButton {
+    bottom: 2rem;
+    right: 10rem;
+   }
 }
