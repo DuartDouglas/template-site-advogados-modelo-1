@@ -13,6 +13,10 @@
     margin-right: 10rem;
   }
 
+  #nav .social-links a img {
+    padding-left: 2rem;
+  }
+
   /* ================== Home ===================== */
   main #home {
     min-height: 100vh;
@@ -42,8 +46,8 @@
 
   #home h2 {
     font-weight: 700;
-    font-size: 5rem;
-    line-height: 5.2rem;
+    font-size: 6rem;
+    line-height: 6.2rem;
   }
 
   #home h1 {
@@ -151,7 +155,7 @@
   }
 
   #about h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 3.5rem;
     margin-block: 0rem 0rem;
   }
@@ -160,7 +164,34 @@
     font-size: 2.5rem;
     line-height: 3rem;
 
-    margin-block: 2rem;
+    margin-block: .8rem 2rem;
+  }
+
+  #about .list .list-item img {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  
+  #about .list .list-item p {
+    color: var(--color-button-hover);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  
+  #about .list-1 {
+    margin-top: 3rem;
+  }
+  
+  #about .list-1 h3 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2.3rem;
+    line-height: 2.6rem;
+  }
+  
+  #about .list-2 {
+    margin-top: 0.8rem;
   }
 
 
@@ -174,6 +205,20 @@
     row-gap: 3rem;
     column-gap: 3rem;
   }
+
+  #about .button a {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 1rem 6rem;
+  }
+
+  #about .button a:nth-child(2) {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 0.6rem 7rem;
+  }
+
+  /* =============== Contato ===================== */
 
   #contact p {
     margin-right: 2rem;

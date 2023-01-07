@@ -52,9 +52,16 @@ font-family: 'Ubuntu', sans-serif;
 
 }
 
-#nav .social-links img {
-  padding: .5rem;
-  height: 90%;
+#nav .social-links a img {
+  padding-left: 1rem;
+  height: 100%;
+
+  position: relative;
+  transition: all .3s ease-in-out 0s;
+}
+
+#nav .social-links a img:hover {
+  transform: translateY(-10%);
 }
 
 /* ================= HOME ================== */
@@ -77,22 +84,23 @@ font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 5rem;
   line-height: 5.7rem;
-  text-align: left;
+  text-align: center;
 }
 
 #home h1 {
+  font-family: var(--fonte-destaque);
   font-weight: 700;
-  font-size: 2.2rem;
-  line-height: 3rem;
-  text-align: left;
+  font-size: 1.9rem;
+  line-height: 2.5rem;
+  text-align: center;
 
   margin-top: 1rem;
 }
 
 #home p {
   font-weight: 400;
-  font-size: 2.2rem;
-  line-height: 3rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
   text-align: left;
 
   margin-top: 4rem;
@@ -107,12 +115,12 @@ font-family: 'Ubuntu', sans-serif;
 
 #home .button a {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2.2rem;
 
   color: var(--text-one);
   background-color: var(--color-button);
-  padding: 1.2rem 5.9rem;
+  padding: 1.2rem 5rem;
   border-radius: 5rem;
   text-align: center;
 
@@ -277,8 +285,8 @@ font-family: 'Ubuntu', sans-serif;
 
 #about h3 {
   font-weight: 500;
-  font-size: 2.1rem;
-  line-height: 2.6rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
 
   margin-bottom: 2rem;
 }
@@ -308,14 +316,14 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 #about .list .list-item img {
-  width: 3rem;
+  width: 2rem;
   margin-right: 1rem;
 }
 
 #about .list .list-item p {
   color: var(--color-button-hover);
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
 }
 
@@ -378,7 +386,7 @@ font-family: 'Ubuntu', sans-serif;
   font-size: 1.6rem;
   line-height: 2.2rem;
 
-  color: var(--text-two);
+  color: var(--color-button);
   background-color: var(--background-sobre);
   padding: 0.8rem 6rem;
   border-radius: 5rem;
@@ -512,14 +520,16 @@ font-family: 'Ubuntu', sans-serif;
 
 #backToTopButton {
  position: fixed; 
- bottom: 1rem;
- right: 2.3rem;
+ bottom: 2rem;
+ right: 2.5rem;
 
  opacity: 0;
  visibility: hidden;
 
  transform: translateY(100%);
  transition: 500ms;
+
+ padding: 1rem;
 }
 
 #backToTopButton.show {
