@@ -7,15 +7,24 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 :root {
-  --text-one: #ffffff;
-  --text-two: #000000;
-  --color-button: #7E1212;
-  --color-button-hover: #b51212;
-  --background-home: #403232;
-  --background-segmentos: #403232;
+  --text-1: #ffffff;
+  --text-2: #000000;
+  --color-button-1: #7E1212;
+  --color-button-2: #302D58;
+  --color-button-3: #957628;
+  --color-button-hover-1: #3f0303;
+  --color-button-hover-2: #0d093f;
+  --color-button-hover-3: #47370e;
+  --color-background-home-1: #403232;
+  --color-background-home-2: #ffffff;
+  --color-background-home-3: #ffffff;
+  --color-background-segments-1: #403232;
+  --color-background-segments-2: #AEAEAE;
+  --color-background-segments-3: #2D2D2D;
   --background-card: #CDCDCD;
-  --background-sobre: #DACECE;
-  --background-contato: #7E1212;
+  --color-background-about-1: #DACECE;
+  --color-background-about-2: #AEAEAE;
+  --color-background-about-3: #1B1B1B;
   --bacground-rodape: none;
 
   --fonte-destaque: 'Ubuntu', sans-serif;
@@ -25,66 +34,147 @@ font-family: 'Ubuntu', sans-serif;
 /* ================= NAV ================== */
 
 #nav {
-  color: var(--text-one);
+  color: var(--text-1);
   background: #0000001b;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding-block: 1rem;
 
   position: absolute;
   z-index: 2;
   width: 100%;
-
 }
 
-#nav p {
-  font-family: var(--fonte-destaque);
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 4rem;
-
+#nav .logo {
   margin-left: 2rem;
 }
 
 #nav .social-links {
   margin-right: 2rem;
-  height: 100%;
+  margin-block: auto;
 
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  
 }
 
-#nav .social-links a img {
-  padding-left: 1rem;
-  height: 100%;
-
+#nav .social-links a {
   position: relative;
   transition: all .3s ease-in-out 0s;
 }
 
-#nav .social-links a img:hover {
+#nav .social-links a:hover {
   transform: translateY(-10%);
+}
+
+#nav .social-links .icon-style { 
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+#iconWhatsApp.color-icon-1, 
+#iconInstagram.color-icon-1, 
+#iconFacebook.color-icon-1 {
+  background: var(--color-button-1);
+}
+
+#iconWhatsApp.color-icon-1:hover, 
+#iconInstagram.color-icon-1:hover, 
+#iconFacebook.color-icon-1:hover {
+  background: var(--color-button-hover-1);
+}
+
+#iconWhatsApp.color-icon-2, 
+#iconInstagram.color-icon-2, 
+#iconFacebook.color-icon-2 {
+  background: var(--color-button-2);
+}
+
+#iconWhatsApp.color-icon-2:hover, 
+#iconInstagram.color-icon-2:hover, 
+#iconFacebook.color-icon-2:hover {
+  background: var(--color-button-hover-2);
+}
+
+#iconWhatsApp.color-icon-3, 
+#iconInstagram.color-icon-3, 
+#iconFacebook.color-icon-3 {
+  background: var(--color-button-3);
+}
+
+#iconWhatsApp.color-icon-3:hover, 
+#iconInstagram.color-icon-3:hover, 
+#iconFacebook.color-icon-3:hover {
+  background: var(--color-button-hover-3);
+}
+
+#nav .social-links .icon-nav-color {
+  fill: var(--text-1);
+  width: 50%;
 }
 
 /* ================= HOME ================== */
 #home {
-  background: var(--background-home) url(../assets/backgroundMobile.png);
+  text-align: center;
+  padding-block: 10rem 40rem;
+
+  padding-inline: 2rem;
+}
+
+#home.backgroundHome-1 {
+  background: var(--color-background-home-1) url(../assets/backgroundMobile.png);
+
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
-  text-align: center;
-  padding-block: 10rem 55rem;
 
-  color: var(--text-one);
-
-  padding-inline: 2rem;
-
+  color: var(--text-1);
 }
 
-#home h2 {
+#home.backgroundHome-2 {
+  background: var(--color-background-home-2) url(../assets/backgroundMobileTwo.png);
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  color: var(--text-1);
+}
+
+#home.backgroundHome-3 {
+  background: var(--color-background-home-3) url(../assets/backgroundMobileThree.png);
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  color: var(--text-1);
+}
+
+#home #name {
   font-family: var(--fonte-destaque);
   font-weight: 700;
   font-size: 5rem;
   line-height: 5.7rem;
   text-align: center;
+}
+
+#home #name.name-1::before {
+  content: "Cameron Williamson";
+}
+
+#home #name.name-2::before {
+  content: "Marvin McKinney";
+}
+
+#home #name.name-3::before {
+  content: "Ronald Richards";
 }
 
 #home h1 {
@@ -115,50 +205,107 @@ font-family: 'Ubuntu', sans-serif;
 
 #home .button a {
   font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
 
-  color: var(--text-one);
-  background-color: var(--color-button);
-  padding: 1.2rem 5rem;
+  color: var(--text-1);
+
+  padding: 1.2rem 3rem;
   border-radius: 5rem;
-  text-align: center;
-
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1.1rem;
+  
   position: relative;
   transition: all .3s ease-in-out 0s;
-
-  box-shadow: 0.8rem 0.8rem 0.8rem #8B3434;
 }
 
-
 #home .button a:hover {
-  background-color: var(--color-button-hover);
   transform: translateY(-10%);
 }
 
+#home .button .ArrowRight {
+  fill: var(--text-1);
+  width: 2.8rem;
+  height: 2.4rem;
+}
 
+#home #buttonHome.buttonHome-1 {
+  background-color: var(--color-button-1);
+  box-shadow: 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.6);
+}
+
+#home #buttonHome.buttonHome-1:hover {
+  background-color: var(--color-button-hover-1);
+}
+
+#home #buttonHome.buttonHome-2 {
+  background-color: var(--color-button-2);
+  box-shadow: 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.6);
+}
+
+#home #buttonHome.buttonHome-2:hover {
+  background-color: var(--color-button-hover-2);
+}
+
+#home #buttonHome.buttonHome-3 {
+  background-color: var(--color-button-3);
+  box-shadow: 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.6);
+}
+
+#home #buttonHome.buttonHome-3:hover {
+  background-color: var(--color-button-hover-3);
+}
 
 /* ================ Segmentos ============= */
-
 #segments {
-  background: var(--background-segmentos) url(../assets/juridico.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left top;
   display: flex;
   flex-direction: column;
   padding-inline: 1rem 2rem;
   padding-block: 10rem 16rem;
 }
 
+#segments.backgroundSegments-1 {
+  background: var(--color-background-segments-1) url(../assets/juridico.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+#segments.backgroundSegments-2 {
+  background: var(--color-background-segments-2) url(../assets/juridico.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+#segments.backgroundSegments-3 {
+  background: var(--color-background-segments-3) url(../assets/juridico.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
 #segments h2 {
   font-family: var(--fonte-destaque);
-  color: var(--text-one);
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.5rem;
   margin-left: 2rem;
+}
 
+#segmentsTitle.segmentsTitle-1 {
+  color: var(--text-1);
+}
+
+#segmentsTitle.segmentsTitle-2 {
+  color: var(--text-2);
+}
+
+#segmentsTitle.segmentsTitle-3 {
+  color: var(--text-1);
 }
 
 #segments .segments {
@@ -167,7 +314,7 @@ font-family: 'Ubuntu', sans-serif;
   justify-content: center;
   flex-wrap: wrap;
 
-  color:var(--text-two);
+  color:var(--text-2);
 
   margin-block: 7rem;
 }
@@ -186,27 +333,63 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 1rem;
   margin-top: 1rem;
 
-  box-shadow: 0.8rem 0.8rem 0.8rem #252525;
+  box-shadow: -0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.8);
 }
 
 .segment-item:hover {
   background-color: #ebebeb;
 }
 
-.segment-item img {
-  height: 4rem;
+.icons-segments {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.segment-item #icon-casamento.icon-casamento-1,
+.segment-item #icon-divorcio.icon-divorcio-1,
+.segment-item #icon-inventario.icon-inventario-1,
+.segment-item #icon-testamento.icon-testamento-1,
+.segment-item #icon-partilha.icon-partilha-1,
+.segment-item #icon-paternidade.icon-paternidade-1,
+.segment-item #icon-guardaJudicial.icon-guardaJudicial-1,
+.segment-item #icon-mediacaoDeConflitos.icon-mediacaoDeConflitos-1 {
+  fill: var(--color-button-1);
+}
+
+.segment-item #icon-casamento.icon-casamento-2,
+.segment-item #icon-divorcio.icon-divorcio-2,
+.segment-item #icon-inventario.icon-inventario-2,
+.segment-item #icon-testamento.icon-testamento-2,
+.segment-item #icon-partilha.icon-partilha-2,
+.segment-item #icon-paternidade.icon-paternidade-2,
+.segment-item #icon-guardaJudicial.icon-guardaJudicial-2,
+.segment-item #icon-mediacaoDeConflitos.icon-mediacaoDeConflitos-2 {
+  fill: var(--color-button-2);
+}
+
+.segment-item #icon-casamento.icon-casamento-3,
+.segment-item #icon-divorcio.icon-divorcio-3,
+.segment-item #icon-inventario.icon-inventario-3,
+.segment-item #icon-testamento.icon-testamento-3,
+.segment-item #icon-partilha.icon-partilha-3,
+.segment-item #icon-paternidade.icon-paternidade-3,
+.segment-item #icon-guardaJudicial.icon-guardaJudicial-3,
+.segment-item #icon-mediacaoDeConflitos.icon-mediacaoDeConflitos-3 {
+  fill: var(--color-button-3);
 }
 
 .segment-item p {
-  color: var(--text-two);
+  color: var(--text-2);
   font-weight: 700;
   font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 2.2rem;
+  margin-top: 1rem;
 }
 
 #segments .button {
   display: flex;
   flex-direction: row;
+  justify-content: right;
   align-items: center;
   flex-wrap: wrap;
 
@@ -215,64 +398,199 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 #segments .button a {
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-
-  color: var(--text-one);
-  background-color: var(--color-button);
-  padding: 1.2rem 3rem;
+  padding: 0.8rem 3rem;
   border-radius: 5rem;
   text-align: center;
 
   position: relative;
   transition: all .3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.1rem;
 }
 
 #segments .button a:hover {
-  background-color: var(--color-button-hover);
   transform: translateY(-10%);
 }
 
-#segments .button a:nth-child(2) {
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+#segments .button .phone {
+  width: 2.8rem;
+  height: 2.4rem;
+}
 
-  color: var(--text-one);
-  background-color: var(--background-segmentos);
-  padding: 0.8rem 6rem;
+#segments .button #colorPhoneSegments.color-phone-1,
+#segments .button #colorPhoneSegments.color-phone-3 {
+  fill: var(--text-1);
+}
+
+#segments .button #colorPhoneSegments.color-phone-2 {
+  fill: var(--color-button-2);
+}
+
+#segments .button a span {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-1 {
+  background-color: var(--color-background-segments-1);
+  border: 4px solid  var(--text-1);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+  color: var(--text-1);
+}
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-1:hover {
+  background-color: var(--color-button-1);
+  border: 4px solid var(--color-button-1);
+}
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-2 {
+  background-color: var(--color-background-segments-2);
+  border: 4px solid var(--color-button-2);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+  color: var(--color-button-2);
+}
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-2:hover {
+  background-color: var(--color-background-about-2);
+  border: 4px solid var(--color-button-hover-2);
+  color: var(--color-button-2);
+}
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-3 {
+  background-color: var(--color-background-segments-3);
+  border: 4px solid var(--text-1);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+  color: var(--text-1);
+}
+
+#segments #buttonSegmentsOne.buttonSegmentsOne-3:hover {
+  background-color: var(--color-button-hover-3);
+  border: 4px solid var(--color-button-hover-3);
+  color: var(--text-1);
+}
+
+#segments .button a:nth-child(2) {
+  padding: 1.2rem 3rem;
   border-radius: 5rem;
-  border: 4px solid var(--color-button);
+
   text-align: center;
 
   position: relative;
   transition: all .3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1.1rem;
+}
+
+#segments .button #buttonSegmentsTwo .ArrowRight {
+  fill: var(--text-1);
+  width: 2.3rem;
+  height: 2rem;
+}
+
+#segments .button #buttonSegmentsTwo span {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  color: var(--text-1);
 }
 
 #segments .button a:hover:nth-child(2) {
-  background-color: var(--color-button-hover);
-  border: 4px solid var(--color-button-hover);
-
   transform: translateY(-10%);
 }
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-1 {
+  background-color: var(--color-button-1);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-1:hover {
+  background-color: var(--color-button-hover-1);
+}
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-2 {
+  background-color: var(--color-button-2);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-2:hover {
+  background-color: var(--color-button-hover-2);
+}
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-3 {
+  background-color: var(--color-button-3);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+#segments #buttonSegmentsTwo.buttonSegmentsTwo-3:hover {
+  background-color: var(--color-button-hover-3);
+}
+
 
 /* ============== Sobre ================= */
 
 #about {
-  background-color: var(--background-sobre);
   padding: 10rem 2rem;
 }
 
-#about .column-about-1 img {
+#about.backgroundAbount-1 {
+  background-color: var(--color-background-about-1);
+  color: var(--text-2);
+}
+
+#about.backgroundAbount-2 {
+  background-color: var(--color-background-about-2);
+  color: var(--text-2);
+}
+
+#about.backgroundAbount-3 {
+  background-color: var(--color-background-about-3);
+  color: var(--text-1);
+}
+
+#about-img.imgPerfil-1 {
+  content: url(../assets/perfil-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   width: 100%;
+
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;  
+}
+
+#about-img.imgPerfil-2 {
+  content: url(../assets/perfil-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+#about-img.imgPerfil-3 {
+  content: url(../assets/perfil-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
 }
 
 #about h2 {
@@ -298,7 +616,6 @@ font-family: 'Ubuntu', sans-serif;
 
 #about a:hover {
   color: var(--color-button-hover);
-  font-style: italic;
 }
 
 #about .list {
@@ -315,16 +632,19 @@ font-family: 'Ubuntu', sans-serif;
   margin-bottom: 0.6rem;
 }
 
-#about .list .list-item img {
+#about .list .list-item .check {
   width: 2rem;
-  margin-right: 1rem;
+  height: 2rem;
+  fill: var(--color-button-1);
 }
 
+
 #about .list .list-item p {
-  color: var(--color-button-hover);
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.5rem;
+
+  margin-left: 1rem;
 }
 
 #about .list-1 {
@@ -361,11 +681,11 @@ font-family: 'Ubuntu', sans-serif;
 
 #about .button a {
   font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
 
-  color: var(--text-one);
-  background-color: var(--color-button);
+  color: var(--text-1);
+
   padding: 1.2rem 3rem;
   border-radius: 5rem;
   text-align: center;
@@ -373,44 +693,54 @@ font-family: 'Ubuntu', sans-serif;
   position: relative;
   transition: all .3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1.1rem;
 }
 
 #about .button a:hover {
-  background-color: var(--color-button-hover);
   transform: translateY(-10%);
 }
 
-#about .button a:nth-child(2) {
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-
-  color: var(--color-button);
-  background-color: var(--background-sobre);
-  padding: 0.8rem 6rem;
-  border-radius: 5rem;
-  border: 4px solid var(--color-button);
-  text-align: center;
-
-  position: relative;
-  transition: all .3s ease-in-out 0s;
-
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+#about .button .ArrowRight {
+  fill: var(--text-1);
+  width: 2.8rem;
+  height: 2.4rem;
 }
 
-#about .button a:hover:nth-child(2) {
-  color: var(--text-one);
-  background-color: var(--color-button-hover);
-  border: 4px solid var(--color-button-hover);
-
-  transform: translateY(-10%);
+#about #buttonAboutOne.buttonAboutOne-1 {
+  background-color: var(--color-button-1);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
 }
+
+#about #buttonAboutOne.buttonAboutOne-1:hover {
+  background-color: var(--color-button-hover-1);
+}
+
+#about #buttonAboutOne.buttonAboutOne-2 {
+  background-color: var(--color-button-2);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+#about #buttonAboutOne.buttonAboutOne-2:hover {
+  background-color: var(--color-button-hover-2);
+}
+
+#about #buttonAboutOne.buttonAboutOne-3 {
+  background-color: var(--color-button-3);
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+#about #buttonAboutOne.buttonAboutOne-3:hover {
+  background-color: var(--color-button-hover-3);
+}
+
+
 
 /* =============== CONTATO ============== */
 
 #contact {
-  background-color: var(--background-contato);
   padding-block: 8rem;
   padding-inline: 2rem;
   display: flex;
@@ -420,8 +750,20 @@ font-family: 'Ubuntu', sans-serif;
   align-items: center;
 }
 
+#contact.backgroundContact-1 {
+  background-color: var(--color-button-1);
+}
+
+#contact.backgroundContact-2 {
+  background-color: var(--color-button-2);
+}
+
+#contact.backgroundContact-3 {
+  background-color: var(--color-button-3);
+}
+
 #contact p {
-  color: var(--text-one);
+  color: var(--text-1);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -433,28 +775,56 @@ font-family: 'Ubuntu', sans-serif;
 
 #contact a {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 2.2rem;
 
-  color: var(--text-one);
-  background-color: var(--color-button);
+  color: var(--text-1);
   padding: 0.8rem 6rem;
   border-radius: 5rem;
-  border: 4px solid var(--text-one);
+  border: 4px solid var(--text-1);
   text-align: center;
 
   position: relative;
   transition: all .3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.2rem 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1.1rem;
 }
 
 #contact a:hover {
-  background-color: var(--color-button-hover);
-  border: 4px solid var(--color-button-hover);
-
   transform: translateY(-10%);
 }
+
+#contact #buttonContact .phone {
+  width: 2.8rem;
+  height: 2.4rem;
+  fill: var(--text-1);
+}
+
+#contact #buttonContact.buttonContact-1:hover {
+  background-color: var(--text-1);
+  border: 4px solid var(--color-button-hover-1);
+  color: var(--color-button-1);
+}
+
+#contact #buttonContact.buttonContact-2:hover {
+  background-color: var(--text-1);
+  border: 4px solid var(--color-button-hover-2);
+  color: var(--color-button-2);
+}
+
+#contact #buttonContact.buttonContact-3:hover {
+  background-color: var(--text-1);
+  border: 4px solid var(--color-button-hover-3);
+  color: var(--color-button-3);
+}
+
+
+/* ========== Footer =============== */
 
 #contact-footer {
   background: #000000 url(../assets/ligacao.png);
@@ -472,14 +842,14 @@ font-family: 'Ubuntu', sans-serif;
 
 #contact-footer h3 {
   font-family: var(--fonte-destaque);
-  color: var(--text-one);
+  color: var(--text-1);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
 #contact-footer p {
-  color: var(--text-one);
+  color: var(--text-1);
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.3rem;
@@ -498,7 +868,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 #contact-footer .local p {
-  color: var(--text-one);
+  color: var(--text-1);
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.3rem;
@@ -507,7 +877,7 @@ font-family: 'Ubuntu', sans-serif;
 
 #contact-footer a {
   font-family: var(--fonte-destaque);
-  color: var(--text-one);
+  color: var(--text-1);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -536,4 +906,50 @@ font-family: 'Ubuntu', sans-serif;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+
+/* ========= menu suspenso alterna cor ===== */
+
+#menuColor {
+  position: fixed; 
+  top: 8rem;
+  left: 0rem;
+
+  background-color: rgba(0, 0, 0, 0.445);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#menuColor p {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+#menuColor #btColorOne {
+  background-color: #7e12127c;
+  padding-inline: 2rem;
+  padding-block: 4rem;
+  border: none;
+}
+
+#menuColor #btColorTwo {
+  background-color: #302d5885;
+  padding-inline: 2rem;
+  padding-block: 4rem;
+  border: none;
+}
+
+#menuColor #btColorThree {
+  background-color: #95762875;
+  padding-inline: 2rem;
+  padding-block: 4rem;
+  border: none;
 }

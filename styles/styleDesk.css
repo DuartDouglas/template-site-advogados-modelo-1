@@ -2,19 +2,23 @@
 
   #nav {
     width: 100%;
-    height: 5%;
+    height: 5rem;
+    padding-block: 1rem;
   }
 
-  #nav p {
-    margin-left: 10rem;
-  }
+  #nav .logo {
+  margin-left: 10rem;
+}
 
   #nav .social-links {
     margin-right: 10rem;
+    margin-block: auto;
+    column-gap: 2rem;
   }
 
-  #nav .social-links a img {
-    padding-left: 2rem;
+  #nav .social-links .icon-style { 
+    width: 5rem;
+    height: 5rem;
   }
 
   /* ================== Home ===================== */
@@ -23,19 +27,42 @@
   }
 
   #home {
-    background: #ffffff url(../assets/background.png);
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
-    padding-block: 0rem;
-
-    color: #ffffff;
-
+    padding-block: 0rem;  
     padding-inline: 2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+  } 
+
+  #home.backgroundHome-1 {
+    background: var(--color-background-home-1) url(../assets/background.png);
+  
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+  
+    color: var(--text-1);
+  }
+  
+  #home.backgroundHome-2 {
+    background: var(--color-background-home-2) url(../assets/backgroundTwo.png);
+  
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+  
+    color: var(--text-1);
+  }
+  
+  #home.backgroundHome-3 {
+    background: var(--color-background-home-3) url(../assets/backgroundThree.png);
+  
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+  
+    color: var(--text-1);
   }
 
   #home h2,
@@ -64,24 +91,39 @@
 
   #home .button a {
     font-size: 2.2rem;
-    line-height: 3rem;
+    line-height: 2.3rem;
     padding: 1.5rem 7rem;
   }
-
-
   /* =========== Segmentos ============ */
 
   #segments {
-    background: #403232 url(../assets/juridico.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
     display: flex;
     flex-direction: row;
     justify-content:center;
     align-items: flex-start;
     padding-inline: 10rem;
     padding-block: 14rem 8rem;
+  }
+
+  #segments.backgroundSegments-1 {
+    background: var(--color-background-segments-1) url(../assets/juridico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+  }
+
+  #segments.backgroundSegments-2 {
+    background: var(--color-background-segments-2) url(../assets/juridico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+  }
+
+  #segments.backgroundSegments-3 {
+    background: var(--color-background-segments-3) url(../assets/juridico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
   }
 
   #segments h2 {
@@ -111,8 +153,9 @@
     margin-top: 2rem;
   }
 
-  .segment-item img {
-    height: 4rem;
+  .icons-segments {
+    width: 5rem;
+    height: 5rem;
   }
 
   #segments .button {
@@ -120,15 +163,27 @@
   }
 
   #segments .button a {
+    padding: 0.4rem 3rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #segments .button a span {
     font-size: 1.8rem;
-    line-height: 2.5rem;
-    padding: 1rem 6rem;
+    line-height: 3rem;
+    
   }
 
   #segments .button a:nth-child(2) {
+    padding: 1.2rem 6rem;
+  }
+
+  #segments .button #buttonSegmentsTwo span {
     font-size: 1.8rem;
     line-height: 2.5rem;
-    padding: 0.6rem 7rem;
   }
 
   /* ========= Sobre ========== */
@@ -139,15 +194,16 @@
     padding: 9rem 10rem 12rem 10rem;
   }
 
-  .column-about-1 {
+  #about .column-about-1 {
     width: 40%;
   }
 
-  .column-about-2 {
-    padding-left: 4rem;
+  #about .column-about-2 {
+    padding-left: 2rem;
+    width: 60%;
   }
 
-  #about .column-about-1 img {
+  #about #about-img {
     max-width: 450px;
     display: block;
     margin-left: auto;
@@ -167,9 +223,9 @@
     margin-block: .8rem 2rem;
   }
 
-  #about .list .list-item img {
-    width: 3rem;
-    margin-right: 1rem;
+  #about .list .list-item .check {
+    width: 2rem;
+    height: 2rem;
   }
   
   #about .list .list-item p {
@@ -177,6 +233,7 @@
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.5rem;
+    margin-left: 1rem;
   }
   
   #about .list-1 {
@@ -198,8 +255,8 @@
   #about .button {
     display: flex;
     flex-direction: row;
-
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-wrap: wrap;
 
     row-gap: 3rem;
@@ -210,12 +267,6 @@
     font-size: 1.8rem;
     line-height: 2.5rem;
     padding: 1rem 6rem;
-  }
-
-  #about .button a:nth-child(2) {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    padding: 0.6rem 7rem;
   }
 
   /* =============== Contato ===================== */
