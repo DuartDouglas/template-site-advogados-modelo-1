@@ -3,23 +3,157 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 */
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 :root {
   --text-one: #ffffff;
   --text-two: #000000;
-  --color-button: #7E1212;
+  --color-button: #7e1212;
   --color-button-hover: #b51212;
   --background-home: #403232;
   --background-segmentos: #403232;
-  --background-card: #CDCDCD;
-  --background-sobre: #DACECE;
-  --background-contato: #7E1212;
+  --background-card: #cdcdcd;
+  --background-sobre: #dacece;
+  --background-contato: #7e1212;
   --bacground-rodape: none;
 
-  --fonte-destaque: 'Ubuntu', sans-serif;
-  --fonte-texto:  'Open Sans', sans-serif;
+  --fonte-destaque: "Ubuntu", sans-serif;
+  --fonte-texto: "Open Sans", sans-serif;
+}
+
+/* CSS Reset */
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ================= NAV ================== */
@@ -34,7 +168,6 @@ font-family: 'Ubuntu', sans-serif;
   position: absolute;
   z-index: 2;
   width: 100%;
-
 }
 
 #nav p {
@@ -49,11 +182,10 @@ font-family: 'Ubuntu', sans-serif;
 #nav .social-links {
   margin-right: 2rem;
   height: 100%;
-
 }
 
 #nav .social-links img {
-  padding: .5rem;
+  padding: 0.5rem;
   height: 90%;
 }
 
@@ -69,7 +201,6 @@ font-family: 'Ubuntu', sans-serif;
   color: var(--text-one);
 
   padding-inline: 2rem;
-
 }
 
 #home h2 {
@@ -94,8 +225,6 @@ font-family: 'Ubuntu', sans-serif;
   font-size: 2.2rem;
   line-height: 3rem;
   text-align: left;
-
-
 }
 
 .button {
@@ -117,18 +246,15 @@ font-family: 'Ubuntu', sans-serif;
   text-align: center;
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.8rem 0.8rem 0.8rem #8B3434;
+  box-shadow: 0.8rem 0.8rem 0.8rem #8b3434;
 }
-
 
 #home .button a:hover {
   background-color: var(--color-button-hover);
   transform: translateY(-10%);
 }
-
-
 
 /* ================ Segmentos ============= */
 
@@ -150,7 +276,6 @@ font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
   line-height: 3.5rem;
   margin-left: 2rem;
-
 }
 
 #segments .segments {
@@ -159,7 +284,7 @@ font-family: 'Ubuntu', sans-serif;
   justify-content: center;
   flex-wrap: wrap;
 
-  color:var(--text-two);
+  color: var(--text-two);
 
   margin-block: 7rem;
 }
@@ -172,12 +297,10 @@ font-family: 'Ubuntu', sans-serif;
   flex-grow: 1;
   flex-basis: 30%;
 
-
   padding-block: 2rem;
   padding-inline: 1rem;
   margin-left: 1rem;
   margin-top: 1rem;
-
 }
 
 .segment-item img {
@@ -213,9 +336,9 @@ font-family: 'Ubuntu', sans-serif;
   text-align: center;
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.5rem 0.5rem 0.5rem #8b3434;
 }
 
 #segments .button a:hover {
@@ -238,9 +361,9 @@ font-family: 'Ubuntu', sans-serif;
   transform: translateY(-10%);
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.5rem 0.5rem 0.5rem #8b3434;
 }
 
 #segments .button a:hover:nth-child(2) {
@@ -302,7 +425,6 @@ font-family: 'Ubuntu', sans-serif;
   margin-right: 1rem;
 }
 
-
 #about .button {
   display: flex;
   flex-direction: column;
@@ -325,9 +447,9 @@ font-family: 'Ubuntu', sans-serif;
   text-align: center;
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.5rem 0.5rem 0.5rem #8b3434;
 }
 
 #about .button a:hover {
@@ -350,9 +472,9 @@ font-family: 'Ubuntu', sans-serif;
   transform: translateY(-10%);
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.5rem 0.5rem 0.5rem #8b3434;
 }
 
 #about .button a:hover:nth-child(2) {
@@ -401,9 +523,9 @@ font-family: 'Ubuntu', sans-serif;
   transform: translateY(-10%);
 
   position: relative;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 
-  box-shadow: 0.5rem 0.5rem 0.5rem #8B3434;
+  box-shadow: 0.5rem 0.5rem 0.5rem #8b3434;
 }
 
 #contact a:hover {
@@ -447,7 +569,7 @@ font-family: 'Ubuntu', sans-serif;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 #contact-footer .local img {
@@ -461,11 +583,201 @@ font-family: 'Ubuntu', sans-serif;
   line-height: 2.3rem;
 }
 
-
 #contact-footer a {
   font-family: var(--fonte-destaque);
   color: var(--text-one);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
+}
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--background-contato);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Desktop */
+@media screen and (min-width: 740px) {
+  #nav {
+    width: 100%;
+    height: 5%;
+  }
+
+  #nav p {
+    margin-left: 10rem;
+  }
+
+  #nav .social-links {
+    margin-right: 10rem;
+  }
+
+  /* ================== Home ===================== */
+
+  #home {
+    background: #ffffff url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    padding-block: 25rem;
+
+    color: #ffffff;
+
+    padding-inline: 2rem;
+  }
+
+  #home h2,
+  #home h1,
+  #home p {
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
+
+  #home .button a {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    padding: 1.5rem 7rem;
+  }
+
+  /* =========== Segmentos ============ */
+
+  #segments {
+    background: #403232 url(../assets/juridico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-inline: 10rem;
+    padding-block: 14rem 8rem;
+  }
+
+  #segments h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
+
+  #segments .segments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-block: initial;
+  }
+
+  .segment-item {
+    flex-grow: 1;
+    flex-basis: 15rem;
+
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .segment-item img {
+    height: 4rem;
+  }
+
+  #segments .button a {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 1rem 6rem;
+  }
+
+  #segments .button a:nth-child(2) {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 0.6rem 7rem;
+  }
+
+  /* ========= Sobre ========== */
+
+  #about {
+    display: flex;
+    flex-direction: row;
+    padding: 9rem 10rem 12rem 10rem;
+  }
+
+  .column-about-1 {
+    width: 40%;
+  }
+
+  .column-about-2 {
+    padding-left: 4rem;
+  }
+
+  #about .column-about-1 img {
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-block: 0rem 0rem;
+  }
+
+  #about h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    margin-block: 2rem;
+  }
+
+  #about .button {
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    row-gap: 3rem;
+    column-gap: 3rem;
+  }
+
+  #contact-footer h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  #contact-footer p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  #contact-footer .local {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  #contact-footer .local img {
+    height: 60%;
+  }
+
+  #contact-footer .local p {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  #contact-footer a {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
